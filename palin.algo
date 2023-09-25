@@ -1,0 +1,15 @@
+FUNCTION palindrome(ch:string) : BOOLEAN
+VAR
+BEGIN
+    IF (ch.length==0) THEN
+        return true
+    ELSE
+        IF (ch[0]==ch[ch.length-1]) THEN
+            ch:= substring(ch,1,ch.length-1);
+            return palindrome(ch:string)
+        ELSE
+            return false
+        END_IF
+    END_IF
+    RETURN value ;
+END
