@@ -1,12 +1,12 @@
 FUNCTION palindrome(ch:string) : BOOLEAN
 VAR
 BEGIN
-    IF (ch.length==0) THEN
+    IF (ch.length<2) THEN
         return true
     ELSE
         IF (ch[0]==ch[ch.length-1]) THEN
             ch:= substring(ch,1,ch.length-1);
-            return palindrome(ch:string)
+            return palindrome(ch)
         ELSE
             return false
         END_IF
